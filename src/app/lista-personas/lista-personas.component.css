@@ -1,0 +1,24 @@
+/* lista-personas.component.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .persona-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .persona-item {
+    background-color: #e0e0e0;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .persona-form {
+    margin-top: 15px;
+  }
+  
+  /* Add more styling as needed */
+  

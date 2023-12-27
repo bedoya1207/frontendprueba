@@ -1,0 +1,20 @@
+<!-- lista-empresas.component.html -->
+<div class="container">
+    <h2>Lista de Empresas</h2>
+    <ul class="empresa-list">
+      <li *ngFor="let empresa of empresas" class="empresa-item">
+        {{ empresa.nombre }}
+      </li>
+    </ul>
+  
+    <h2>Nueva Empresa</h2>
+    <form (ngSubmit)="guardarEmpresa()" class="empresa-form">
+      <label for="idEmpresa">id</label>
+      <input id="idEmpresa"[(ngModel)]="nuevaEmpresa.id" name="idEmpresa"required>
+      <label for="nombreEmpresa">Nombre:</label>
+      <input id="nombreEmpresa" [(ngModel)]="nuevaEmpresa.nombre" name="nombreEmpresa" required>
+  
+      <button type="submit">Guardar Empresa</button>
+    </form>
+  </div>
+  

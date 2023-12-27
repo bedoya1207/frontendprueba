@@ -1,0 +1,29 @@
+<!-- lista-personas.component.html -->
+<div class="container">
+    <h2>Lista de Personas</h2>
+    <ul class="persona-list">
+      <li *ngFor="let persona of personas" class="persona-item">
+        {{ persona.nombres }} {{ persona.apellidos }} - {{ persona.empresa.nombre }}
+      </li>
+    </ul>
+  
+    <h2>Nueva Persona</h2>
+    <form (ngSubmit)="guardarPersona()" class="persona-form">
+      <label for="idPersona">id:</label>
+      <input id="idPersona" [(ngModel)]="nuevaPersona.id" name="nombresPersona" required>
+      <label for="nombresPersona">Nombres:</label>
+      <input id="nombresPersona" [(ngModel)]="nuevaPersona.nombres" name="nombresPersona" required>
+  
+      <label for="apellidosPersona">Apellidos:</label>
+      <input id="apellidosPersona" [(ngModel)]="nuevaPersona.apellidos" name="apellidosPersona" required>
+  
+      <label for="empresaPersona">Empresa:</label>
+
+
+    <label for="empresaPersona">Empresa:</label>
+    <input id="empresaPersona" [(ngModel)]="textoEmpresa" name="empresaPersona" required>
+  
+      <button type="submit">Guardar Persona</button>
+    </form>
+  </div>
+  
